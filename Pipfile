@@ -1,0 +1,21 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+psycopg2-binary = "*"
+pillow = "*"
+pandas = "*"
+matplotlib = "*"
+install = "*"
+python-decouple = "*"
+
+[dev-packages]
+black = "*"
+flake8 = "*"
+isort = "*"
+
+[requires]
+python_version = "3.12"

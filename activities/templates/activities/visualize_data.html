@@ -1,0 +1,18 @@
+<!-- visualize_data.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Data Visualization</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <h4>Calories Burned Over Time</h4>
+            <img src="data:image/png;base64,{{ chart1|safe }}" class="img-fluid">
+        </div>
+        <div class="col-md-6">
+            <h4>Activity Durations</h4>
+            <img src="data:image/png;base64,{{ chart2|safe }}" class="img-fluid">
+        </div>
+    </div>
+</div>
+{% endblock %}

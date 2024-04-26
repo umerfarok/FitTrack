@@ -1,0 +1,30 @@
+<!-- view_activity.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Activity Log</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Activity Type</th>
+                <th>Duration</th>
+                <th>Date</th>
+                <th>Calories Burned</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for activity in activities %}
+            <tr>
+                <td>{{ activity.activity_type }}</td>
+                <td>{{ activity.duration }}</td>
+                <td>{{ activity.date }}</td>
+                <td>{{ activity.calories_burned }}</td>
+                <td>{{ activity.notes }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

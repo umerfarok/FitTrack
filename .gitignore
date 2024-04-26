@@ -1,0 +1,35 @@
+# .gitignore
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*~
+
+# Django
+*.log
+*.pot
+*.pyc
+*.db
+*.sqlite3
+*.sqlite3-journal
+local_settings.py
+db.sqlite3
+media
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Mac
+.DS_Store
+

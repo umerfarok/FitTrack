@@ -1,0 +1,30 @@
+<!-- view_reminder.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Reminders</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Reminder Date</th>
+                <th>Reminder Time</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for reminder in reminders %}
+            <tr>
+                <td>{{ reminder.title }}</td>
+                <td>{{ reminder.description }}</td>
+                <td>{{ reminder.reminder_date }}</td>
+                <td>{{ reminder.reminder_time }}</td>
+                <td>{% if reminder.is_completed %}Completed{% else %}Pending{% endif %}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
