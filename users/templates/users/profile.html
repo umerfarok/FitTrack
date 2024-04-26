@@ -3,10 +3,22 @@
 
 {% block content %}
 <div class="container mt-4">
-    <h2>{{ user.username }}'s Profile</h2>
-    <p>{{ user.profile.bio }}</p>
-    {% if user.profile.avatar %}
-        <img src="{{ user.profile.avatar.url }}" alt="Avatar" class="img-thumbnail">
-    {% endif %}
+    <div class="card">
+        <div class="card-header">
+            <h2>{{ user.username }}'s Profile</h2>
+        </div>
+        <div class="card-body">
+            {% if user.profile.avatar %}
+                <div class="text-center mb-4">
+                    <img src="{{ user.profile.avatar.url }}" alt="Avatar" class="rounded-circle" style="width: 200px; height: 200px;">
+                </div>
+            {% endif %}
+            {% if user.profile.bio %}
+                <p class="card-text">{{ user.profile.bio }}</p>
+            {% else %}
+                <p class="card-text">No bio available</p>
+            {% endif %}
+        </div>
+    </div>
 </div>
 {% endblock %}
