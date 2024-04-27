@@ -105,7 +105,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+# settings.py
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # Login and Logout URLs
 LOGIN_URL = 'users:login'
 LOGIN_REDIRECT_URL = 'index'
